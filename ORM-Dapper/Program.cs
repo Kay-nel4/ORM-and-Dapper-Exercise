@@ -27,6 +27,7 @@ var prodRepo = new ProductRepository(conn);
 
 //prodRepo.CreateProduct("Airwrap", 500, 2, false,4 );
 //prodRepo.UpdateProduct("Dyson Airwrap", 550, 2,false,4, 941);
+prodRepo.DeleteProduct(941);
 
 var products = prodRepo.GetAllProducts();
 foreach (var product in products)

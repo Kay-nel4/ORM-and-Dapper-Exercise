@@ -29,10 +29,10 @@ public class ProductRepository : IProductRepository
             new {name, price, categoryID, onSale, stockLevel, productId});
     }
 
-    public void DeleteProduct(int productID)
+    public void DeleteProduct(int productId)
     {
-        _connection.Execute("SELECT FROM reviews WHERE ProductID = @productID", new{productID});
-        _connection.Execute("SELECT FROM sales WHERE ProductID = @productID", new{productID});
-        _connection.Execute("SELECT FROM products WHERE ProductID = @productID", new{productID});
+        _connection.Execute("DELETE FROM reviews WHERE ProductID = @productId", new{productId});
+        _connection.Execute("DELETE FROM sales WHERE ProductID = @productId", new{productId});
+        _connection.Execute("DELETE FROM products WHERE ProductID = @productId", new{productId});
     }
 }
