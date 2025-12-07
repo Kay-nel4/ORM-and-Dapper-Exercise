@@ -23,3 +23,27 @@ foreach (var dep in departments)
 {
     Console.WriteLine($"Name: {dep.Name} | ID: {dep.DepartmentID}");
 }
+var prodRepo = new ProductRepository(conn);
+
+//prodRepo.CreateProduct("Airwrap", 500, 2, false,4 );
+//prodRepo.UpdateProduct("Dyson Airwrap", 550, 2,false,4, 941);
+
+var products = prodRepo.GetAllProducts();
+foreach (var product in products)
+{
+    Console.WriteLine($"Name: {product.Name} | ID: {product.ProductID} | Price: {product.Price} | CategoryID: {product.CategoryID} | OnSale: {product.OnSale} | Stock: {product.StockLevel}");
+}
+//Just wanted to see if the bool was working on the sale column.
+//foreach (var product in products)
+//    if (product.OnSale == false)
+//    {
+//        Console.WriteLine("Not on sale");
+//    }
+//    else
+//    {
+//        {
+//            Console.WriteLine("On sale");
+//        }
+//    }
+
+
