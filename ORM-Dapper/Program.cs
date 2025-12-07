@@ -27,8 +27,9 @@ var prodRepo = new ProductRepository(conn);
 
 //prodRepo.CreateProduct("Airwrap", 500, 2, false,4 );
 //prodRepo.UpdateProduct("Dyson Airwrap", 550, 2,false,4, 941);
-prodRepo.DeleteProduct(941);
+//prodRepo.DeleteProduct(941);
 
+Console.ForegroundColor = ConsoleColor.Blue;
 var products = prodRepo.GetAllProducts();
 foreach (var product in products)
 {
@@ -47,4 +48,5 @@ foreach (var product in products)
 //        }
 //    }
 
+//Also trying to figure out why my lines are printing staggered and not just straight across.
 
